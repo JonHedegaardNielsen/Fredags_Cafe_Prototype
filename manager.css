@@ -13,6 +13,10 @@ body {
     border-radius: 5px;
 }
 
+#managerUI{
+    padding-left: 17%;
+}
+
 .passwordbox {
     display: flex;
     padding: 5px;
@@ -33,6 +37,36 @@ body {
     color: #000000;
     outline: #2b1010;
     text-align: center;
+}
+
+#loginBox{
+    border: 1px solid black ;
+    margin-top: 50px;
+    width: 75%;
+    padding: 20px 0 20px 30px;
+}
+
+#loginButton{
+    background-color: rgba(0, 0, 0, .100);
+    border-color: rgb(0, 0, 0, );
+    width: auto;
+    min-width: 100px;
+    font-size: 30px;
+    height: auto;
+    border-width: 1px;
+}
+
+#passwordBox{
+    display: flex;
+    height: 50px;
+    width: 50px;
+}
+
+#passwordInput{
+    border-color: rgb(0, 0, 0, .200) ;
+    height: auto;
+    width: auto;
+    font-size: 20px;
 }
 
 .passwordbutton:hover {

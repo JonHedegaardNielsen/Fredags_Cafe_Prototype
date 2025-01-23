@@ -13,32 +13,37 @@
 }
 
 .grid.shopItems{
-    width: 62.5%;
+    padding: 0;
+    width: 62.5% !important;
     background: rgb(68, 68, 68);
     color: white;
+    height: 100vh;
 }
 
 .itemButton{
     display: inline-block;
-    width: 17.5vh;
-    height: 10vh;
+    width: 18.3%;
+    height: 15vh;
     position: relative;
     cursor: pointer;
     vertical-align: top;
-    margin: 0 1% 0.5% 0;
+    margin: 0.5%;
     border-radius: 5px;
-    padding-bottom: 20px;
+    padding-bottom: 5vh;
 }
 
 .item{
+    padding-top: 10px;
     text-align: center;
     width: 100%;
     height: 10vh;
     display: block;
-    font-size: 1.5vw;
+    font-size: 2vw;
+    line-height: 2rem;
 }
 
 .price{
+    background-color: rgba(0, 0, 0, .06666666666666667);
     position: absolute;
     text-align: right;
     bottom: 0;
@@ -57,10 +62,12 @@ span.priceText{
 }
 
 .action{
-    width: 90%;
+    width: 98%;
     cursor: pointer;
     border-radius: 5px;
     color: white;
+    vertical-align: top;
+    margin-top: 5px;
 }
 
 .pageButtons{
@@ -70,35 +77,57 @@ span.priceText{
     border-radius: 15px;
 }
 
+.pageButtons.manager{
+    width: 200px;
+}
+
 .grid.pickedItems{
     margin-left: 10px;
     display: inline-block;
+    position: relative;
+    width: 30%;
+    height: 100%;
 }
 
 #actions{
     position: relative;
     background-color: rgb(51, 51, 51);
     height: 100%;
+    padding: 10px;
 }
+
+
 
 .action.red{
     background-color: red;
 }
-
 .action.yellow{
     background-color: #aa0;
 }
+.action.red{
+    background-color: red;
+}
 
-.action.green{
-    background-color: green;
+.itemButton.darkblue{
+    background-color: #00f;
+}
+
+.itemButton.blue{
+    background-color: #0aa;
+}
+
+.itemButton.green{
+    background-color: #0c0;
 }
 
 .action.approve{
+    background-color: #0c0;
     position: absolute;
     bottom: 0;
 }
 
 body{
+    height: 100vh;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -106,15 +135,21 @@ body{
     background: #fff;
     font-family: Lato, 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-size: 14px;
-    line-height: 1.4285em;
+    line-height: 1.5em;
     color: rgba(0, 0, 0, .87);
 }
 
 div.highlight{
-    height: 40px;
+    height: 50px;
+    width: 100%;
     background: hsla(0, 0%, 100%, .26666666666666666);
     border-radius: 5px 5px 0 0;
 }
+
+div.highlight.action{
+    height: 30px;
+}
+
 
 .pageLinkDiv.operatorLink{
     background-color: #21ba45;
@@ -122,22 +157,33 @@ div.highlight{
     border-radius: 5px 0 0 5px;
 }
 
-.pageLink.operatorLink{
+.pageLinkDiv.operatorLink.managerPage{
+    background-color: rgb(205, 205, 205);
+}
+
+.pageLink.white{
     color: white;
 }
 
-.pageLink.managerLink{
+.pageLink.black{
     color: black;
 }
 
 div.pageLinkDiv{
     padding: 20px 20px 50px 20px;
+    cursor: pointer;
 }
 
 .pageLinkDiv.managerLink{
     border-radius: 0 5px 5px 0;
     width: 50%;
     background-color: rgb(205, 205, 205);
+}
+
+
+
+.pageLinkDiv.managerLink.managerPage{
+    background-color: #21ba45;
 }
 
 a.pageLink{
@@ -148,7 +194,7 @@ a.pageLink{
 div.totalCost{
     border: 1px solid rgba(34,36,38,.15);
     margin-top: 50px;
-    width: 250px;
+    width: 90%;
     height: 200px;
     box-shadow: 0 1px 2px 0 rgba(34, 36, 38, .15);
 }
@@ -156,4 +202,18 @@ div.totalCost{
 div.totalCostText{
     margin-top: 10%;
     font-size: 4rem;
+    text-align: center;
+    width: 100%;
+    height: 21vh;
+}
+
+.pickedItems{
+    height: 65%;
+    width: 80%;
+    overflow-y: scroll;
+}
+
+.actionsInnerBox{
+    height: 100%;
+    position: relative;
 }
